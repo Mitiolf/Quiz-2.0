@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import Form from "./components/Form"
+import StartQuiz from "./components/StartQuiz"
+import Decorations from "./components/Decorations"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./style.css"
+
+export default function App(){
+    
+    const [questions, setQuestions] = React.useState([])
+    const [quiz, setQuiz] = React.useState(false)
+    
+// getting questions from API
+    React.useEffect(
+        () => {
+        fetch("https://opentdb.com/api.php?amount=5&category=20&type=multiple")
+            .then(res => res.json())
+            .then(data => 
+                setQuestions(function(){
+                    const quest = []
+                    for(var i = 0; i < 5; i++){
+                quest.push({question: data.results[i].question,
+                anwsers: shuffle([...data.results[i].incorrect_answers, data.results[i].correct_answer]),
+                correct: data.results[i].correct_answer,
+                key: `Q${i}`})}
+                    return quest}))
+    },[])
+
+// Array shuffling function
+function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle...
+  while (currentIndex !== 0) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
 }
 
-export default App;
+
+
+    return (<div><main>
+    {quiz ? <Form questions={questions}/> : <StartQuiz setQuiz={setQuiz}/>}
+    </main>
+    <Decorations /></div>)
+}

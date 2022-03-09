@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@500;700&display=swap');
+
+body{margin: 0;
+    font-family: 'Karla', sans-serif;
+    font-style: normal;
+    color: #293264;
+    background: #F5F7FB;
+}
+main {
+    padding: 1em 5em;
+}
+h2{
+    font-weight: 00;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    margin-bottom: 1.3em;
+}
+.question--container{
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    border-bottom: 2.8px solid #DBDEF0;
+    padding-bottom: 1.4em;
+}
+label{
+    border: 1.5px #293264 solid;
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 1.7em;
+    text-align: center;
+    padding: 0 2em; 
+    cursor: pointer;
+    margin: .5em 1em;
+
+}
+input[type=radio]{
+    display: none;
+}
+input[type=radio]:checked + label{
+    background-color: #D6DBF5 ;
+    border: 1.5px #D6DBF5 solid;
+}
+button {
+    margin: 2em auto -4em;
+    background: #4D5B9E;
+    border: none;
+    border-radius: 1.1em;
+    color: #F5F7FB;
+    padding: 1em 1.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+.upperSvg{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin:0;
+    z-index: -1}
+.lowerSvg{
+    position: relative;
+    z-index: -1;
+    top: 1em;
+}
+.startQuiz{
+    margin: 30vh auto;
+    text-align: center;
+  }  
+.startQuizButton{
+    padding: 1em 3em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+.playAgain{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    max-width: 700px;
+    margin: auto;
+}
+.playAgain p {
+        margin: 2em auto -4em;
+        padding-right: 1em; 
+}
