@@ -17,9 +17,18 @@ export default function App(){
             .then(res => res.json())
             .then(data => 
                 setQuestions(function(){
+                    // var to change this '&amp;' to this '&' and then replace lower
+                    var map =
+    {
+        '&amp;': '&',
+        '&lt;': '<',
+        '&gt;': '>',
+        '&quot;': '"',
+        '&#039;': "'"
+    };
                     const quest = []
                     for(var i = 0; i < 5; i++){
-                quest.push({question: data.results[i].question,
+                quest.push({question:( data.results[i].question).replace(/&amp;|&lt;|&gt;|&quot;|&#039;/g, function(m) {return map[m];}),
                 anwsers: shuffle([...data.results[i].incorrect_answers, data.results[i].correct_answer]),
                 correct: data.results[i].correct_answer,
                 key: `Q${i}`})}
