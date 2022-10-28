@@ -1,4 +1,4 @@
-#Quiz 2.0
+# Quiz 2.0
 Quiz 2.0 is my first solo project after Learn React for Free Course on scrimba.com
 
 I made it totaly from scratch.</br>
