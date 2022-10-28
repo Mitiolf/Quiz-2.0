@@ -1,7 +1,9 @@
-This is a final project of Learn React for Free Course on scrimba.com
+#Quiz 2.0
+Quiz 2.0 is my first solo project after Learn React for Free Course on scrimba.com
 
-I made it totaly from scratch.
-I took the design from figma (https://www.figma.com/file/E9S5iPcm10f0RIHK8mCqKL/Quizzical-App?node-id=0%3A1)
+I made it totaly from scratch.</br>
+I took the design from Figma.</br>
+https://www.figma.com/file/E9S5iPcm10f0RIHK8mCqKL/Quizzical-App?node-id=0%3A1
 
 During this course I learned:
 
@@ -22,6 +24,3 @@ During this course I learned:
     -Making API calls
     -useEffect
     -Local storage with React
-
-
-Autor: Wojciech Sordyl
