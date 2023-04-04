@@ -9,20 +9,20 @@ https://mitiolf.github.io/quiz-2.0/
 
 ### During this course I learned:
 
-  - Local setup
-  - JSX
-  - ReactDOM.render()
-  - Custom component
-  - Organizing components
-  - Reusable components
-  - JS inside JSX
-  - Props
-  - Destructuring
-  - Rendering arrays
-  - Mapping components
-  - useState
-  - Conditional rendering
-  - React forms
-  - Making API calls
-  - useEffect
-  - Local storage with React
+    - Local setup
+    - JSX
+    - ReactDOM.render()
+    - Custom component
+    - Organizing components
+    - Reusable components
+    - JS inside JSX
+    - Props
+    - Destructuring
+    - Rendering arrays
+    - Mapping components
+    - useState
+    - Conditional rendering
+    - React forms
+    - Making API calls
+    - useEffect
+    - Local storage with React
