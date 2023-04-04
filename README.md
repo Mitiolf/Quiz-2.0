@@ -4,6 +4,9 @@ Quiz 2.0 is my first solo project after Learn React for Free Course on scrimba.c
 It is made based on the design from Figma.</br>
 https://www.figma.com/file/E9S5iPcm10f0RIHK8mCqKL/Quizzical-App?node-id=0%3A1
 
+Deployment:</br>
+https://mitiolf.github.io/quiz-2.0/
+
 ### During this course I learned:
 
   - Local setup
